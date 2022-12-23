@@ -6,4 +6,5 @@ class User < ApplicationRecord
 
   validates :email, presence: true
   validates :encrypted_password, presence: true
+  validates :name,:profile,:occupation,:position, presence: true
 end
