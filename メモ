@@ -1,0 +1,2 @@
+devise/registrations#newに該当するパス
+new_user_registration GET
