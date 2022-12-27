@@ -22,7 +22,7 @@
 
 | Column     | Type      | Options                        |
 | ---------- | --------- | ------------------------------ |
-| title      | text      | null: false                    |
+| title      | string    | null: false                    |
 | catch_copy | text      | null: false                    |
 | concept    | text      | null: false                    |
 | user       | reference | null: false, foreign_key: true |
