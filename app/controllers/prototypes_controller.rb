@@ -1,5 +1,6 @@
 class PrototypesController < ApplicationController
   def index
+    @prototypes = Prototype.all
   end
 
   def new
@@ -14,6 +15,7 @@ class PrototypesController < ApplicationController
       render :new
     end
   end
+  
 
   private
   def prototype_params
