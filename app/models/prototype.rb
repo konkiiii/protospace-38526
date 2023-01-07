@@ -10,4 +10,6 @@ class Prototype < ApplicationRecord
   # has_many :comments
   # ※commentsのアソシエーション作成時にコメントアウト外す
   has_one_attached :image
+
+  
 end
