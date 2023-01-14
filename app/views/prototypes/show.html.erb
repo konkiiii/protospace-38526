@@ -33,8 +33,9 @@
       <div class="prototype__comments">
         <%# ログインしているユーザーには以下のコメント投稿フォームを表示する %>
         <% if user_signed_in? %>
-          <%# <%= form_with model: [@prototype, @comment],local: true do |f|%>
-          <%= form_with model: [@prototype],local: true do |f|%>
+          <%= form_with model: [@prototype, @comment],local: true do |f|%>
+          <%# <%= form_with model: [@prototype],local: true do |f|%>
+          <%# これだとエラーは出ないがコメントが追加できない %>
           <%# <%= form_with url: "/prototypes", method: :post, local: true do |f|%>
             <div class="field">
               <%= f.label :content, "コメント" %><br />
@@ -51,7 +52,7 @@
           <% @comments.each do |comment| %>
             <li class="comments_list">
               <%= comment.content %>
-              <%= link_to "#{@comment.user.name}", user_path(current_user), class: :comment_user %>
+              <%= link_to "#{comment.user.name}", user_path(current_user), class: :comment_user %>
             </li>
           <% end %>
           <%# // 投稿に紐づくコメントを一覧する処理を記述する %>

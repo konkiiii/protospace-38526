@@ -9,7 +9,7 @@ class PrototypesController < ApplicationController
   def new
     @prototype = Prototype.new
   end
-
+  
   def create
     @prototype = Prototype.new(prototype_params)
     if @prototype.save
