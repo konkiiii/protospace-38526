@@ -24,21 +24,7 @@ class PrototypesController < ApplicationController
   end
 
   def edit
-    # @prototype = Prototype.find(params[:id])
   end
-
-  # def update
-  #   # if @prototype.update(prototype_params)
-  #   #   redirect_to prototype_path(@prototype)
-  #   prototype = Prototype.find(params[:id])
-  #   if prototype.update(prototype_params)
-  #     redirect_to prototype_path
-  #   else
-  #     render :edit
-  #     # redirect_to edit_prototype_path
-  #     # render :edit にするとルーティングおかしかったので上記にした
-  #   end
-  # end
 
   def update
     if @prototype.update(prototype_params)
