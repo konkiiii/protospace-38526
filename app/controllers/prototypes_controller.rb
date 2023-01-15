@@ -36,8 +36,10 @@ class PrototypesController < ApplicationController
   end
 
   def destroy
-    if @prototype.update(prototype_params)
-      redirect_to prototype_path(@prototype)
+    # if @prototype.update(prototype_params)
+    if @prototype.destroy
+      # redirect_to prototype_path(@prototype)
+      redirect_to root_path
     else
       render :edit
     end
